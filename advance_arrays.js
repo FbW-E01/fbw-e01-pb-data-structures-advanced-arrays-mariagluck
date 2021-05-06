@@ -33,6 +33,11 @@ arrayOfNumbers.forEach(function(thing) {
 // 8
 // 10
 
+//with map to return an new array with the increment numbers
+const array_increment = arrayOfNumbers.map(x => x + 1); 
+console.log(array_increment); 
+//or
+console.log(arrayOfNumbers.map(x => x+1)); 
 
 // #### 3. Filter Evens
 // * Create a function called filterEvens that filters an array and only return even numbers. The function should take an array of numbers as an argument, and should not use a loop.
@@ -40,7 +45,7 @@ arrayOfNumbers.forEach(function(thing) {
 //this is onw way:
 
 function filterEvens(arr) {
-    let result = arr.filter(arr => arr % 2 == 0);
+    let result = arr.filter(x => x % 2 == 0);
     return result;
   }
 
@@ -61,7 +66,7 @@ function applyFilter(array, testCallback) {
 }
 
 function filterEvens(arr) {
-    let result = applyFilter(arr, arr => arr % 2 == 0);
+    let result = applyFilter(arr, x => x % 2 == 0);
     return result;
   }
 
