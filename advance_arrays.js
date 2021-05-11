@@ -37,7 +37,7 @@ arrayOfNumbers.forEach(function(thing) {
 const array_increment = arrayOfNumbers.map(x => x + 1); 
 console.log(array_increment); 
 //or
-console.log(arrayOfNumbers.map(x => x+1)); 
+console.log(arrayOfNumbers.map(x => x + 1)); 
 
 // #### 3. Filter Evens
 // * Create a function called filterEvens that filters an array and only return even numbers. The function should take an array of numbers as an argument, and should not use a loop.
@@ -111,12 +111,13 @@ console.log(sum1([6,7,7])); //returns 20
 const arrayOfNum = [ 2353, 34653, 98765, 458574, 856];
 const squareRoot = arr => {
     return arr.map(function (x) {
-      return Math.pow(x, 2);
+      return Math.sqrt(x);
     });
   }
-  console.log(squareRoot(arrayOfNum));//[ 5536609, 1200830409, 9754525225, 210290113476, 732736 ]
+  console.log(squareRoot(arrayOfNum));//[ 48.507731342539614, 186.1531627450901, 314.2689930616764, 677.1809211724736, 29.257477676655586 ]
 
   //or like this!!
-const squareRoot1 = array =>  array.map(x => x ** 2);
+const squareRoot1 = array =>  array.map(x => Math.sqrt(x));
 
-console.log(squareRoot1(arrayOfNum));//[ 5536609, 1200830409, 9754525225, 210290113476, 732736 ]
+console.log(squareRoot1(arrayOfNum));//[ 48.507731342539614, 186.1531627450901, 314.2689930616764, 677.1809211724736, 29.257477676655586 ]
+
